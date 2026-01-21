@@ -154,11 +154,6 @@
         padding: 16px;
     }
 
-    .date-filters {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
     .equity-curve-header {
         flex-direction: column;
         align-items: flex-start;

@@ -55,3 +55,116 @@
 .return-neutral {
     color: var(--text-secondary);
 }
+
+.equity-curve-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.equity-curve-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.equity-curve-date {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.reset-link {
+    font-size: 13px;
+    color: var(--color-primary);
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition-base);
+}
+
+.reset-link:hover {
+    color: var(--color-primary-light);
+    text-decoration: underline;
+}
+
+/* Date Filters */
+.date-filters {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.date-filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.date-filter-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+
+.date-filter-input {
+    padding: 10px 14px;
+    border: 1px solid var(--card-border);
+    border-radius: var(--border-radius-sm);
+    font-size: 13px;
+    font-family: inherit;
+    color: var(--text-primary);
+    background: var(--card-bg);
+    min-width: 140px;
+    transition: var(--transition-base);
+}
+
+.date-filter-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+/* Chart Container */
+.chart-container {
+    padding: 24px 0;
+    min-height: 400px;
+}
+
+/* Chart Legend */
+.chart-legend {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 16px 24px;
+    border-top: 1px solid var(--card-border);
+    background: rgba(248, 249, 252, 0.5);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.legend-color {
+    width: 16px;
+    height: 3px;
+    border-radius: 2px;
+}
+
+.legend-color.primary {
+    background: var(--color-chart-primary);
+}
+
+.legend-color.secondary {
+    background: var(--color-chart-secondary);
+}
+
+.legend-color.tertiary {
+    background: var(--color-chart-tertiary);
+}

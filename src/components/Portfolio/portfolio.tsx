@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import { Suspense } from "react";
 import { readExcelFile } from "../../utils/readExcel.ts";
 import { calculateDrawdown } from "../../utils/calculateDrawdown.ts";
-import TrailingReturnsTable from "../portfolioStatistics/TrailingReturnsTable.tsx";
-
+import TrailingReturnsTable from "../PortfolioStatistics/trailingReturnsTable.tsx";
+import EquityCurveChart from "../PortfolioStatistics/equityCurveChart.tsx";
 export default function Portfolio() {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -36,7 +36,11 @@ export default function Portfolio() {
             </div>
 
             <Suspense fallback={<div>Loading...</div>}>
-                <TrailingReturnsTable data={data} />
+                <div className="portfolio-content">
+                    <TrailingReturnsTable data={data} />
+                    <EquityCurveChart data={data} />
+                </div>
+
             </Suspense>
         </>
     );
