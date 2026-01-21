@@ -1,5 +1,6 @@
 import { useState, useMemo, useEffect } from "react";
-import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, ReferenceLine } from "recharts";
+import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, ReferenceLine, AreaChart, Area } from "recharts";
+import DrawdownChart from "./drawdownChart.tsx";
 
 const formatDateToISO = (date: Date) => {
     if (!date || !(date instanceof Date) || isNaN(date.getTime())) {
@@ -171,7 +172,7 @@ export default function EquityCurveChart({ data }: { data: any[] }) {
             <div className="card-body">
                 <div className="chart-container">
                     <ResponsiveContainer width="100%" height={400}>
-                        <LineChart data={normalizedData} margin={{ top: 20, right: 30, left: 10, bottom: 20 }}>
+                        <LineChart data={normalizedData} margin={{ top: 20, right: 30, left: 10, bottom: 5 }}>
                             <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" vertical={false} />
                             <XAxis
                                 dataKey="date"
@@ -205,17 +206,10 @@ export default function EquityCurveChart({ data }: { data: any[] }) {
                                 dot={false}
                                 name="NIFTY50"
                             />
-                            <Line
-                                type="monotone"
-                                dataKey="drawdown"
-                                stroke="#ec4899"
-                                strokeWidth={1.5}
-                                dot={false}
-                                name="Drawdown"
-                            />
                         </LineChart>
                     </ResponsiveContainer>
                 </div>
+                <DrawdownChart data={normalizedData} />
             </div>
 
             <div className="chart-legend">
@@ -226,10 +220,6 @@ export default function EquityCurveChart({ data }: { data: any[] }) {
                 <div className="legend-item">
                     <span className="legend-color secondary"></span>
                     NIFTY50
-                </div>
-                <div className="legend-item">
-                    <span className="legend-color tertiary"></span>
-                    Drawdown
                 </div>
             </div>
         </div>

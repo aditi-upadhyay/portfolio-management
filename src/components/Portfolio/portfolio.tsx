@@ -1,11 +1,12 @@
 
 import { useEffect, useState } from "react";
 import { Suspense } from "react";
+import "./portfolio.css";
 import { readExcelFile } from "../../utils/readExcel.ts";
 import { calculateDrawdown } from "../../utils/calculateDrawdown.ts";
 import TrailingReturnsTable from "../PortfolioStatistics/trailingReturnsTable.tsx";
 import EquityCurveChart from "../PortfolioStatistics/equityCurveChart.tsx";
-import "./portfolio.css";
+
 export default function Portfolio() {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -41,7 +42,6 @@ export default function Portfolio() {
                     <TrailingReturnsTable data={data} />
                     <EquityCurveChart data={data} />
                 </div>
-
             </Suspense>
         </>
     );
