@@ -2,12 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import "./sidebar.css";
 import React from "react";
 import { RoutePath, NavLabel, NavIcons } from "../../enums/sidebar.ts";
-
-type NavItem = {
-  path: RoutePath;
-  label: NavLabel;
-  Icon: React.ElementType;
-};
+import { NavItem } from "../../types/sidebar.ts";
 
 export default function Sidebar() {
   const location = useLocation();
