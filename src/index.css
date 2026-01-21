@@ -43,3 +43,32 @@ code {
   --border-radius-sm: 8px;
   --transition-base: all 0.2s ease;
 }
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.content {
+    margin-left: 240px;
+    padding: 32px 40px;
+    width: calc(100% - 240px);
+    min-height: 100vh;
+}
+
+
+@media (max-width: 1024px) {
+    .content {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+        padding: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        margin-left: 0;
+        width: 100%;
+        padding: 16px;
+    }
+}

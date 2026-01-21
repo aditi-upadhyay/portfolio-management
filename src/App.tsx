@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/SideBar/sidebar.tsx";
 import React from "react";
+import Dashboard from "./components/Dashboard/dashboard.tsx";
 
 export default function App() {
     return (
@@ -9,7 +10,8 @@ export default function App() {
                 <Sidebar />
                 <div className="content">
                     <Routes>
-                        </Routes>
+                        <Route path="/" element={<Dashboard />} />
+                    </Routes>
                 </div>
             </div>
         </BrowserRouter>
