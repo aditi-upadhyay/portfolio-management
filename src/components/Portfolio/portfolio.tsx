@@ -5,6 +5,7 @@ import { readExcelFile } from "../../utils/readExcel.ts";
 import { calculateDrawdown } from "../../utils/calculateDrawdown.ts";
 import TrailingReturnsTable from "../PortfolioStatistics/trailingReturnsTable.tsx";
 import EquityCurveChart from "../PortfolioStatistics/equityCurveChart.tsx";
+import "./portfolio.css";
 export default function Portfolio() {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
