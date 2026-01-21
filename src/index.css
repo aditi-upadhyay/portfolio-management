@@ -11,3 +11,35 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  --color-primary: #6366f1;
+  --color-primary-light: #818cf8;
+  --color-accent: #8b5cf6;
+
+  --sidebar-bg: #1e1e2d;
+  --sidebar-hover: #2a2a3d;
+  --sidebar-text: #a0a0b8;
+  --sidebar-text-active: #ffffff;
+  --sidebar-logo-bg: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+
+  --content-bg: #f8f9fc;
+  --card-bg: #ffffff;
+  --card-border: #e5e7eb;
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1);
+  --card-shadow-hover: 0 10px 40px rgba(0, 0, 0, 0.1);
+
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --text-muted: #9ca3af;
+
+  --color-positive: #10b981;
+  --color-negative: #ef4444;
+  --color-chart-primary: #10b981;
+  --color-chart-secondary: #6366f1;
+  --color-chart-tertiary: #ec4899;
+
+  --border-radius: 12px;
+  --border-radius-sm: 8px;
+  --transition-base: all 0.2s ease;
+}
